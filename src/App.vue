@@ -1,12 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="container-fluid">
+    <app-header></app-header>
+     
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+import Header from './components/Header'
+export default {
+  components:{
+    appHeader: Header
+  }
+}
+</script>
 
 <style>
 #app {
