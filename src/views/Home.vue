@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div class="todo-container-fluid">
+        <app-todos></app-todos>
+    </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Todos from "@/components/Todos.vue";
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
+    name: "home",
+    components: {
+        appTodos: Todos,
+    },
+};
 </script>
+
+<style >
+.todo-container-fluid {
+  
+    margin-top: .3rem;
+}
+</style>
