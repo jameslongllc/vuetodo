@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid">
-        <app-header></app-header>
+        <Header />
 
         <router-view></router-view>
     </div>
@@ -13,13 +13,13 @@ import Header from "./components/Header";
 
 export default {
     components: {
-        appHeader: Header,
+        Header,
     },
 };
 </script>
 
 <style scoped>
-.container-fluid{
-  margin-top: .2rem;
+.container-fluid {
+    margin-top: 0.2rem;
 }
 </style>

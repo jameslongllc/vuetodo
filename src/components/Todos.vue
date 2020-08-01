@@ -1,23 +1,23 @@
 <template>
     <div class="todo-wrapper">
         <div class="todo-container">
-            <!-- <TodoList /> -->
-            <todo-list :todo="todos" />
-        </div>
-        <div class="modal">
-            <div class="modal-content">
-                Modal Window
+            <div class="todo-create-btn-container">
+                <Modal />
             </div>
+            <!-- <TodoList /> -->
+            <todo-list :todos="todos" />
         </div>
     </div>
 </template>
 
 <script>
 import TodoList from "./TodoList";
+import Modal from "./Modal";
 export default {
     name: "Todos",
     components: {
         TodoList,
+        Modal,
     },
     data() {
         return {
@@ -45,6 +45,7 @@ export default {
             ],
         };
     },
+    
 };
 </script>
 
@@ -54,6 +55,13 @@ export default {
 $color-red: red;
 
 .todo {
+    &-container {
+        width: 400px;
+        min-height: 400px;
+        background-color: #ededed;
+        border-radius: 5px;
+        text-align: center;
+    }
     &-wrapper {
         /* flexible styling */
         display: flex;
@@ -63,11 +71,8 @@ $color-red: red;
         width: 100%;
         /*height: 2000px;*/
     }
-    &-container {
-        width: 400px;
-        min-height: 400px;
-        background-color: #ededed;
-        border-radius: 5px;
+    &-create-btn-container {
+        margin: 10px;
     }
 }
 </style>

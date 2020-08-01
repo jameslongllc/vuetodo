@@ -1,7 +1,7 @@
 <template>
     <div class="b-navbar-top">
         <b-navbar toggleable="lg" type="dark" variant="info">
-            <b-navbar-brand href="#">vueRecipes</b-navbar-brand>
+            <b-navbar-brand href="#">vueTodo</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -18,7 +18,7 @@
                 <b-navbar-nav class="ml-auto">
                     <b-nav-form>
                         <b-form-input size="md" class="mr-sm-2" placeholder="Search"></b-form-input>
-                        <b-button size="" class="my-2 my-sm-0" type="submit">Search</b-button>
+                        <b-button size class="my-2 my-sm-0" type="submit">Search</b-button>
                     </b-nav-form>
                 </b-navbar-nav>
 
@@ -46,7 +46,7 @@
 </template>
 
 <style scoped>
-b-navbar-brand{
-	font-size: 2rem;
+b-navbar-brand {
+    font-size: 2rem;
 }
 </style>

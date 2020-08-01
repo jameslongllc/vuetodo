@@ -1,6 +1,6 @@
 <template>
     <div class="todo-container-fluid">
-        <app-todos></app-todos>
+        <Todos />
     </div>
 </template>
 
@@ -11,14 +11,13 @@ import Todos from "@/components/Todos.vue";
 export default {
     name: "home",
     components: {
-        appTodos: Todos,
+        Todos,
     },
 };
 </script>
 
 <style >
 .todo-container-fluid {
-  
-    margin-top: .3rem;
+    margin-top: 0.3rem;
 }
 </style>
