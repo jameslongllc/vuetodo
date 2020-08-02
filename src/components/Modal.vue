@@ -4,18 +4,8 @@
 
         <div class="modal" :class="{'is-active': isOpen}">
             <div class="modal-content">
-                <span @click="isOpen = false" class="close">&times;</span>
-                <form class="app-form">
-                    <div class="form-control">
-                        <label class="label">Title</label>
-                        <input class="form-input" type="text" />
-                    </div>
-                    <div class="form-control">
-                        <label class="label">Description</label>
-                        <input class="form-input" type="text" />
-                    </div>
-                    <button type="submit" class="app-button btn btn-primary">Submit</button>
-                </form>
+                <span @click="close = false" class="close">&times;</span>
+                <slot />
             </div>
         </div>
     </div>
@@ -23,10 +13,28 @@
 
 <script>
 export default {
+    // props: {
+    //     close: {
+    //         type: Boolean,
+    //         required: false,
+    //     },
+    // },
     data() {
         return {
             isOpen: false,
         };
+    },
+    watch: {
+        close(isClose, prevIsClose) {
+            if (isClose && this.isOpen) {
+                this.isOpen = false;
+            }
+        },
+    },
+    methods: {
+        close() {
+            this.isOpen = false;
+        },
     },
 };
 </script>
@@ -58,7 +66,7 @@ export default {
         border: none;
         text-align: left;
     }
-    .app-button{
+    .app-button {
         width: 30%;
     }
 }

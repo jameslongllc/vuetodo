@@ -2,7 +2,7 @@
     <div class="todo-wrapper">
         <div class="todo-container">
             <div class="todo-create-btn-container">
-                <Modal />
+                <todo-create @formSubmitted="createTodo" />
             </div>
             <!-- <TodoList /> -->
             <todo-list :todos="todos" />
@@ -12,12 +12,12 @@
 
 <script>
 import TodoList from "./TodoList";
-import Modal from "./Modal";
+import TodoCreate from "./TodoCreate";
 export default {
     name: "Todos",
     components: {
         TodoList,
-        Modal,
+        TodoCreate,
     },
     data() {
         return {
@@ -45,7 +45,11 @@ export default {
             ],
         };
     },
-    
+    methods: {
+        createTodo(todo) {
+            this.todos.push(todo);
+        },
+    },
 };
 </script>
 

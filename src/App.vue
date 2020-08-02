@@ -22,4 +22,5 @@ export default {
 .container-fluid {
     margin-top: 0.2rem;
 }
+
 </style>
