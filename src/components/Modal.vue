@@ -14,7 +14,7 @@
                         <label class="label">Description</label>
                         <input class="form-input" type="text" />
                     </div>
-                    <button type="button" class="app-button btn btn-primary">Submit</button>
+                    <button type="submit" class="app-button btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
