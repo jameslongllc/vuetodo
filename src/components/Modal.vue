@@ -13,12 +13,6 @@
 
 <script>
 export default {
-    // props: {
-    //     close: {
-    //         type: Boolean,
-    //         required: false,
-    //     },
-    // },
     data() {
         return {
             isOpen: false,
