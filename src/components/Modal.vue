@@ -42,28 +42,6 @@ export default {
     font-weight: bold;
     width: 100%;
 }
-
-.app-form {
-    .label {
-        display: block;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .form-input {
-        padding: 10px;
-        font-size: 17px;
-        width: 100%;
-    }
-    .form-control {
-        margin-bottom: 10px;
-        height: auto;
-        border: none;
-        text-align: left;
-    }
-    .app-button {
-        width: 30%;
-    }
-}
 .close {
     color: black;
     font-size: 28px;

@@ -78,5 +78,51 @@ $color-red: red;
     &-create-btn-container {
         margin: 10px;
     }
+    &-item {
+        background-color: gray;
+        min-height: 70px;
+        margin: 10px;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+        font-size: 23px;
+    }
+    &-item-content-title {
+        font-weight: bold;
+    }
+    &-item-content-description {
+        font-size: 19px;
+    }
+}
+.app-form {
+    .label {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .form-input {
+        padding: 10px;
+        font-size: 17px;
+        width: 100%;
+    }
+    .form-control {
+        margin-bottom: 10px;
+        height: auto;
+        border: none;
+        text-align: left;
+    }
+
+    .app {
+        &buttons {
+            display: inline-block;
+            align-items: center;
+        }
+        &-button {
+            width: 30%;
+            line-height: 0.5rem;
+            padding-bottom: 0.5rem;
+            margin-right: 10px;
+        }
+    }
 }
 </style>
