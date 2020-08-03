@@ -13,6 +13,8 @@
 <script>
 import TodoList from "./TodoList";
 import TodoCreate from "./TodoCreate";
+// import store from "../store/index";
+import store from "../store";
 export default {
     name: "Todos",
     components: {
@@ -21,33 +23,14 @@ export default {
     },
     data() {
         return {
-            todos: [
-                {
-                    _id: "1",
-                    title: "Walk The Dog",
-                    description: "Go to forrest near the Zoo",
-                },
-                {
-                    _id: "2",
-                    title: "Buy some bread",
-                    description: "Preferably Potato",
-                },
-                {
-                    _id: "3",
-                    title: "Learn programming",
-                    description: "Now is the time to learn",
-                },
-                {
-                    _id: "4",
-                    title: "Learn Web Development",
-                    description: "Create Web-Base Software",
-                },
-            ],
+            todos: store.state.todos,
         };
     },
     methods: {
         createTodo(todo) {
-            this.todos.push(todo);
+            
+            store.dispatch("createTodo", todo);
+            // store.createTodo(todo);
         },
     },
 };
