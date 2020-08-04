@@ -26,9 +26,11 @@ export default {
             todos: store.state.todos,
         };
     },
+    created() {
+        this.todos = store.dispatch("initStore");
+    },
     methods: {
         createTodo(todo) {
-            
             store.dispatch("createTodo", todo);
             // store.createTodo(todo);
         },
