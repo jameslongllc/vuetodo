@@ -65,7 +65,7 @@ export default {
             this.editMode = false;
         },
         deleteTodo() {
-            alert("Confirm Todo Deletion!");
+            store.dispatch("deleteTodo", this.todo._id);
         },
     },
 };

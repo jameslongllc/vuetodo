@@ -44,7 +44,7 @@ $color-red: red;
 .todo {
     &-container {
         width: 400px;
-        min-height: 400px;
+        min-height: 150px;
         background-color: #ededed;
         border-radius: 5px;
         text-align: center;
